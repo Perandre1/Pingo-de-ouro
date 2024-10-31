@@ -105,11 +105,23 @@ nav#menu ul li a {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    max-width: 300px; /* Reduzindo a largura */
 }
 
 .produto img {
-    width: 100px;
-    height: 100px;
+    width: 150px; /* Aumentando o tamanho da imagem */
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.produto h3 {
+    margin: 0.5rem 0;
+}
+
+.produto p {
+    margin: 0.5rem 0;
 }
 
 #itens-carrinho {
@@ -127,4 +139,3 @@ nav#menu ul li a {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
