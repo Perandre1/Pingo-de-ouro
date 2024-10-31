@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pingo de Ouro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-container">
+        <h1>Pingo de Ouro</h1>
+        <form id="login-form" onsubmit="return login()">
+            <input type="text" id="username" placeholder="Nome" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <div id="main-menu" style="display: none;">
+        <header>
+            <div id="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <h1>Pingo de Ouro</h1>
+            <div id="cart-icon" onclick="showCart()">🛒</div>
+        </header>
+        <nav id="menu">
+            <ul>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#promocoes">Promoções</a></li>
+            </ul>
+        </nav>
+        <section id="cardapio">
+            <h2>Cardápio</h2>
+            <div class="produto" onclick="addToCart('Café', 5.00)">
+                <img src="imagens/cafe.jpg" alt="Café">
+                <h3>Café</h3>
+                <p>R$5,00</p>
+            </div>
+            <div class="produto" onclick="addToCart('Bolo', 10.00)">
+                <img src="imagens/brownie.jpg" alt="Bolo">
+                <h3>Bolo</h3>
+                <p>R$10,00</p>
+            </div>
+            <div class="produto" onclick="addToCart('Donuts', 7.00)">
+                <img src="images/donuts.jpg" alt="Donuts">
+                <h3>Donuts</h3>
+                <p>R$7,00</p>
+            </div>
+            <div class="produto" onclick="addToCart('Cupcake', 8.00)">
+                <img src="images/cupcake.jpg" alt="Cupcake">
+                <h3>Cupcake</h3>
+                <p>R$8,00</p>
+            </div>
+            <div class="produto" onclick="addToCart('Achocolatado', 6.00)">
+                <img src="imagens/achocolatado.jpg" alt="Achocolatado">
+                <h3>Achocolatado</h3>
+                <p>R$6,00</p>
+            </div>
+        </section>
+        <section id="promocoes">
+            <h2>Promoções</h2>
+            <p>Confira nossas promoções imperdíveis!</p>
+        </section>
+        <section id="carrinho" style="display: none;">
+            <h2>Carrinho</h2>
+            <div id="itens-carrinho"></div>
+            <button onclick="comprarMais()">Comprar Mais</button>
+            <button onclick="finalizarCompra()">Finalizar Compra</button>
+        </section>
+    </div>
+    <script src="java.js"></script>
+</body>
+</html>
