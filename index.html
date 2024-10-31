@@ -23,10 +23,16 @@
         </header>
         <nav id="menu">
             <ul>
-                <li><a href="#cardapio">Cardápio</a></li>
-                <li><a href="#promocoes">Promoções</a></li>
+                <li><a href="#promocoes" onclick="toggleMenu()">Promoções</a></li>
+                <li><a href="#cardapio" onclick="toggleMenu()">Cardápio</a></li>
+                <li><a href="#sobre" onclick="toggleMenu()">Sobre Nós</a></li>
+                <li><a href="#endereco" onclick="toggleMenu()">Endereço</a></li>
             </ul>
         </nav>
+        <section id="promocoes">
+            <h2>Promoções</h2>
+            <p>Confira nossas promoções imperdíveis!</p>
+        </section>
         <section id="cardapio">
             <h2>Cardápio</h2>
             <div class="produto" onclick="addToCart('Café', 5.00)">
@@ -40,12 +46,12 @@
                 <p>R$10,00</p>
             </div>
             <div class="produto" onclick="addToCart('Donuts', 7.00)">
-                <img src="images/donuts.jpg" alt="Donuts">
+                <img src="imagens/dunuts.jpg" alt="Donuts">
                 <h3>Donuts</h3>
                 <p>R$7,00</p>
             </div>
             <div class="produto" onclick="addToCart('Cupcake', 8.00)">
-                <img src="images/cupcake.jpg" alt="Cupcake">
+                <img src="imagens/cupcake.jpg" alt="Cupcake">
                 <h3>Cupcake</h3>
                 <p>R$8,00</p>
             </div>
@@ -55,15 +61,27 @@
                 <p>R$6,00</p>
             </div>
         </section>
-        <section id="promocoes">
-            <h2>Promoções</h2>
-            <p>Confira nossas promoções imperdíveis!</p>
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>Bem-vindo ao Pingo de Ouro, a sua nova cafeteria favorita, inaugurada em 2024! Nossa missão é proporcionar uma experiência acolhedora e única, onde cada xícara de café é feita com amor e dedicação.</p>
+            <p>Aqui, valorizamos a qualidade dos nossos produtos, selecionando grãos de café de origem sustentável e de alta qualidade. Nossa equipe é apaixonada por café e sempre está pronta para compartilhar suas recomendações e curiosidades sobre as diferentes variedades que oferecemos.</p>
+            <p>Além do nosso café especial, você encontrará uma seleção de deliciosos quitutes, preparados diariamente com ingredientes frescos e locais. Queremos que cada visita ao Pingo de Ouro seja um momento de prazer e relaxamento, seja para uma pausa no seu dia ou um encontro com amigos.</p>
+            <p>Venha nos visitar e descubra o sabor e a atmosfera que fazem do Pingo de Ouro um verdadeiro tesouro na sua rotina!</p>
+        </section>
+        <section id="endereco">
+            <h2>Endereço</h2>
+            <p>Rua Japim 502, Jardim Bandeirantes</p>
         </section>
         <section id="carrinho" style="display: none;">
             <h2>Carrinho</h2>
             <div id="itens-carrinho"></div>
             <button onclick="comprarMais()">Comprar Mais</button>
             <button onclick="finalizarCompra()">Finalizar Compra</button>
+            <div id="nota-fiscal" style="display: none;">
+                <h2>Nota Fiscal Eletrônica</h2>
+                <div id="itens-nota-fiscal"></div>
+                <button onclick="imprimirNota()">Imprimir Nota Fiscal</button>
+            </div>
         </section>
     </div>
     <script src="java.js"></script>
